@@ -150,13 +150,24 @@ VALUES ('Roberto Lima', 'roberto.lima@empresa.com', 'senha333');
 
 -- Inserindo dados na tabela Endereco
 INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
-VALUES ('Avenida Paulista', 'SP', 'Centro', 'São Paulo', 1234);
+VALUES ('Rua São Paulo', 'SP', 'Centro', 'Sorocaba', 1001);
 
 INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
-VALUES ('Rua das Flores', 'RJ', 'Botafogo', 'Rio de Janeiro', 567);
+VALUES ('Avenida Ipiranga', 'SP', 'Jardins', 'São Paulo', 2002);
 
 INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
-VALUES ('Avenida Amazonas', 'MG', 'Savassi', 'Belo Horizonte', 890);
+VALUES ('Rua das Flores', 'SP', 'Centro', 'Itu', 3003);
+
+
+INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
+VALUES ('Rua do Comércio', 'SP', 'Centro', 'Sorocaba', 1001);
+
+INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
+VALUES ('Avenida Ipiranga', 'SP', 'Jardins', 'São Paulo', 2002);
+
+INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
+VALUES ('Rua das Flores', 'SP', 'Centro', 'Itu', 3003);
+
 
 
 -- Inserindo dados na tabela Evento
@@ -168,6 +179,21 @@ VALUES ('BGS', 'Evento sobre cultura Geek. Participe do Cantadas Enfadonhas estr
 
 INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
 VALUES ('CCXP', 'CCXP é uma convenção brasileira de cultura pop nos moldes da San Diego Comic-Con cobrindo as principais áreas dessa indústria, como vídeo games, histórias em quadrinhos, filmes e séries para TV', '2024-12-05', '10:30:00', 'Cultural', '5555-6666', FALSE, 'www.forumempreendedor.com', 3, 3);
+
+INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
+VALUES ('Festival de Música', 'Um festival com várias bandas locais e nacionais.', '2024-12-10', '16:00:00', 'Cultural', '11-9988-7766', TRUE, 'www.festivalmusica.com', 1, 1);
+
+INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
+VALUES ('Feira Gastronômica', 'Venha experimentar pratos de diversas regiões do Brasil.', '2025-01-15', '12:00:00', 'Gastronômico', '11-8877-6655', FALSE, 'www.feiragastronomica.com', 2, 2);
+
+INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
+VALUES ('Corrida de Rua', 'Participe da corrida mais esperada do ano!', '2025-02-05', '08:00:00', 'Esportivo', '11-7766-5544', TRUE, 'www.corridadeRua.com', 3, 1);
+
+INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
+VALUES ('Teatro Musical', 'Uma apresentação ao vivo com os melhores artistas.', '2025-03-20', '19:30:00', 'Artístico', '11-6655-4433', TRUE, 'www.teatromusical.com', 1, 2);
+
+INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
+VALUES ('Stand-Up Comedy', 'Uma noite de risadas com os melhores comediantes.', '2025-04-25', '21:00:00', 'Stand-Up', '11-5544-3322', FALSE, 'www.standupcomedy.com', 2, 1);
 
 -- Inserindo dados na tabela Foto
 INSERT INTO `foto` (`foto`, `evento_id`)
