@@ -161,13 +161,13 @@ VALUES ('Avenida Amazonas', 'MG', 'Savassi', 'Belo Horizonte', 890);
 
 -- Inserindo dados na tabela Evento
 INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
-VALUES ('Workshop de Tecnologia', 'Evento sobre inovações tecnológicas.', '2024-10-15', '14:00:00', 'Tecnologia', '1111-2222', TRUE, 'www.workshoptech.com', 1, 1);
+VALUES ('Balada Explosion', 'A "Balada Explosion" poderia ser um evento de música eletrônica ou festa temática, voltada para jovens e adultos que buscam uma experiência intensa e memorável. Caracterizada por uma atmosfera vibrante, com iluminação de ponta, efeitos especiais e som de alta qualidade, essa balada traria DJs renomados, tocando diversos gêneros como house, techno, e trance. Além disso, poderia incluir performances ao vivo, cenários imersivos e áreas temáticas, proporcionando uma explosão de sensações e diversão. A ideia central seria criar um ambiente envolvente, onde o público pudesse dançar e socializar em uma experiência única e eletrizante.', '2024-10-15', '14:00:00', 'Balada', '1111-2222', TRUE, 'www.workshoptech.com', 1, 1);
 
 INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
-VALUES ('Conferência de Marketing', 'Evento sobre estratégias de marketing.', '2024-11-20', '09:00:00', 'Marketing', '3333-4444', FALSE, 'www.conferencemarketing.com', 2, 2);
+VALUES ('BGS', 'Evento sobre cultura Geek. Participe do Cantadas Enfadonhas estreado por Muca Muriçoca.', '2024-11-20', '09:00:00', 'Jogo', '3333-4444', FALSE, 'www.conferencemarketing.com', 2, 2);
 
 INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
-VALUES ('Fórum de Empreendedorismo', 'Discussões sobre o futuro do empreendedorismo.', '2024-12-05', '10:30:00', 'Empreendedorismo', '5555-6666', FALSE, 'www.forumempreendedor.com', 3, 3);
+VALUES ('CCXP', 'CCXP é uma convenção brasileira de cultura pop nos moldes da San Diego Comic-Con cobrindo as principais áreas dessa indústria, como vídeo games, histórias em quadrinhos, filmes e séries para TV', '2024-12-05', '10:30:00', 'Cultural', '5555-6666', FALSE, 'www.forumempreendedor.com', 3, 3);
 
 -- Inserindo dados na tabela Foto
 INSERT INTO `foto` (`foto`, `evento_id`)
