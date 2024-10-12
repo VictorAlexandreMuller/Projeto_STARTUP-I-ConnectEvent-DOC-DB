@@ -112,6 +112,12 @@ CREATE TABLE IF NOT EXISTS `notificacao_usuario` (
   FOREIGN KEY (`usuario_id`) REFERENCES `usuario`(`id`) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `tipo` (
+  id INT PRIMARY KEY,
+  tipo VARCHAR(255)
+) ENGINE = InnoDB;
+
+
 -- Inserindo dados na tabela Usuario
 INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) 
 VALUES ('João Silva', 'joao.silva@gmail.com', 'senha123', 25, 'Masculino', 'São Paulo', 'SP');
@@ -222,4 +228,20 @@ VALUES (2, 2);
 
 INSERT INTO `notificacao_usuario` (`notificacao_id`, `usuario_id`)
 VALUES (3, 3);
+
+INSERT INTO `tipo` (id, tipo) VALUES (1, 'Artístico');
+INSERT INTO `tipo` (id, tipo) VALUES (2, 'Balada');
+INSERT INTO `tipo` (id, tipo) VALUES (3, 'Cultural');
+INSERT INTO `tipo` (id, tipo) VALUES (4, 'Educacional');
+INSERT INTO `tipo` (id, tipo) VALUES (5, 'Esportivo');
+INSERT INTO `tipo` (id, tipo) VALUES (6, 'Gastronômico');
+INSERT INTO `tipo` (id, tipo) VALUES (7, 'Jogo');
+INSERT INTO `tipo` (id, tipo) VALUES (8, 'Oficial');
+INSERT INTO `tipo` (id, tipo) VALUES (9, 'Profissional');
+INSERT INTO `tipo` (id, tipo) VALUES (10, 'Religioso');
+INSERT INTO `tipo` (id, tipo) VALUES (11, 'Show');
+INSERT INTO `tipo` (id, tipo) VALUES (12, 'Social');
+INSERT INTO `tipo` (id, tipo) VALUES (13, 'Stand-Up');
+INSERT INTO `tipo` (id, tipo) VALUES (14, 'Técnico-Científico');
+
 
