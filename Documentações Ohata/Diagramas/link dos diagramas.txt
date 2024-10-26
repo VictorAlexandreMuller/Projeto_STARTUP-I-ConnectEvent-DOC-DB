@@ -19,7 +19,7 @@ https://imgur.com/Z35UIWq
 --------------- CASO DE USO ----------------
 
 Diagrama de Caso de Uso
-https://imgur.com/ejxXbBX
+https://imgur.com/6HaTvsE
 
 --------------------------------------------
 
@@ -32,10 +32,10 @@ https://imgur.com/v0tG5sI
 
 ---------------- ATIVIDADE -----------------
 
-Diagrama de Atividade Usuarios Comuns
-https://imgur.com/cY5nuSP
+Diagrama de Atividade Usuarios
+https://imgur.com/Vzcg1Z7
 
-Diagrama de Atividade Empresarios
-https://imgur.com/KhEbI8y
+Diagrama de Atividade Anunciantes
+https://imgur.com/ynhg6mp
 
 --------------------------------------------
