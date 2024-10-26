@@ -1,38 +1,41 @@
 --------------- SEQUENCIA ------------------
-Diagrama-de-Sequencia-Empresario
-https://imgur.com/QyK9SzQ
+Diagrama-de-Sequencia-Empresario 1
+https://imgur.com/4eTM60k
+
+Diagrama-de-Sequencia-Empresario 2
+https://imgur.com/YADEBr2
 
 Diagrama-de-Sequencia-Empresario-CRUD
-https://imgur.com/90yMofH
+https://imgur.com/UYdT4Ok
 
 Diagrama-de-Sequencia-Usuario
-https://imgur.com/618Vfjo
+https://imgur.com/OwTjBCR
 
 Diagrama-de-Sequencia-Usuario-CRUD
-https://imgur.com/CAx9Yxs
+https://imgur.com/Z35UIWq
 
 --------------------------------------------
 
 --------------- CASO DE USO ----------------
 
 Diagrama de Caso de Uso
-https://imgur.com/hAmQKqu
+https://imgur.com/ejxXbBX
 
 --------------------------------------------
 
 ----------------- CLASSE -------------------
 
 Diagrama de Classe
-https://imgur.com/yWTYYGn
+https://imgur.com/v0tG5sI
 
 --------------------------------------------
 
 ---------------- ATIVIDADE -----------------
 
 Diagrama de Atividade Usuarios Comuns
-https://imgur.com/rWDBKvH
+https://imgur.com/cY5nuSP
 
 Diagrama de Atividade Empresarios
-https://imgur.com/PX0EfOT
+https://imgur.com/KhEbI8y
 
 --------------------------------------------
