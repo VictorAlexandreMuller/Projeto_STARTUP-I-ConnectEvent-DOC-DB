@@ -53,6 +53,7 @@ CREATE TABLE IF NOT EXISTS `evento` (
   `telefone` VARCHAR(20),
   `livre` BOOLEAN,
   `link` VARCHAR(100) NOT NULL,
+  `is_anunciado` BOOLEAN default false,
   `endereco_id` INT,
   `empresario_id` INT,
   FOREIGN KEY (`endereco_id`) REFERENCES `endereco`(`id`) ON DELETE CASCADE,
