@@ -149,6 +149,9 @@ VALUES ('Ana Pereira', 'ana.pereira@empresa.com', 'senha222');
 INSERT INTO `empresario` (`nome`, `email`, `senha`)
 VALUES ('Roberto Lima', 'roberto.lima@empresa.com', 'senha333');
 
+INSERT INTO `empresario` (`nome`, `email`, `senha`)
+VALUES ('Gabriel Costa', 'gabriel.costa@empresa.com', 'senha789');
+
 -- Inserindo dados na tabela Endereco
 INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
 VALUES ('Rua São Paulo', 'SP', 'Centro', 'Sorocaba', 1001);
@@ -169,6 +172,11 @@ VALUES ('Avenida Ipiranga', 'SP', 'Jardins', 'São Paulo', 2002);
 INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
 VALUES ('Rua das Flores', 'SP', 'Centro', 'Itu', 3003);
 
+INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
+VALUES ('Avenida Brasil', 'SP', 'Centro', 'São Paulo', 1234);
+
+INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`)
+VALUES ('Praça da Liberdade', 'SP', 'Liberdade', 'São Paulo', 567);
 
 
 -- Inserindo dados na tabela Evento
@@ -195,6 +203,13 @@ VALUES ('Teatro Musical', 'Uma apresentação ao vivo com os melhores artistas.'
 
 INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `empresario_id`)
 VALUES ('Stand-Up Comedy', 'Uma noite de risadas com os melhores comediantes.', '2025-04-25', '21:00:00', 'Stand-Up', '11-5544-3322', FALSE, 'www.standupcomedy.com', 2, 1);
+
+INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `is_anunciado`, `endereco_id`, `empresario_id`)
+VALUES ('Festival de Inverno', 'Festival com atrações musicais e culturais em uma noite memorável.', '2023-08-15', '18:00:00', 'Cultural', '11-9876-5432', TRUE, 'www.festivaldeinverno.com', TRUE, 4, 4);
+
+INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `is_anunciado`, `endereco_id`, `empresario_id`)
+VALUES ('Encontro Cultural de Verão', 'Um evento de verão com diversas atividades culturais e recreativas.', '2025-07-10', '15:00:00', 'Cultural', '11-1234-5678', TRUE, 'www.culturaverão.com', TRUE, 5, 4);
+
 
 -- Inserindo dados na tabela Foto
 INSERT INTO `foto` (`foto`, `evento_id`)
