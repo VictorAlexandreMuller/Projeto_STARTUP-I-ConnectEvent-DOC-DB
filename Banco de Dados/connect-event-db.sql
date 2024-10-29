@@ -16,13 +16,13 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 ) ENGINE = InnoDB;
 
 -- Tabela Amigos
-CREATE TABLE IF NOT EXISTS `amigos` (
-  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `usuario_id` INT NOT NULL,
-  `amigo_id` INT NOT NULL,
-  FOREIGN KEY (`usuario_id`) REFERENCES `usuario`(`id`) ON DELETE CASCADE,
-  FOREIGN KEY (`amigo_id`) REFERENCES `usuario`(`id`) ON DELETE CASCADE
-) ENGINE = InnoDB;
+CREATE TABLE amizades (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Identificador único da amizade (opcional)
+    user_id_1 INT NOT NULL,             -- ID do primeiro usuário
+    user_id_2 INT NOT NULL,             -- ID do segundo usuário
+    status ENUM('ativo', 'pendente') DEFAULT 'pendente', -- Status da amizade
+    UNIQUE (user_id_1, user_id_2)      -- Impede duplicatas
+);
 
 -- Tabela Empresario
 CREATE TABLE IF NOT EXISTS `empresario` (
