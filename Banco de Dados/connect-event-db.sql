@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `evento` (
 -- Tabela Foto
 CREATE TABLE IF NOT EXISTS `foto` (
   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `foto` VARCHAR(100) NOT NULL,
+  `caminho` VARCHAR(100) NOT NULL,
   `evento_id` INT NOT NULL,
   FOREIGN KEY (`evento_id`) REFERENCES `evento`(`id`) ON DELETE CASCADE
 ) ENGINE = InnoDB;
@@ -150,17 +150,6 @@ VALUES ('Festival de Inverno', 'Festival com atrações musicais e culturais em 
 
 INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `endereco_id`, `usuario_id`)
 VALUES ('Encontro Cultural de Verão', 'Um evento de verão com diversas atividades culturais e recreativas.', '2025-07-10', '15:00:00', 'Cultural', '11-1234-5678', TRUE, 'www.culturaverão.com', 10, 4);
-
-
--- Inserindo dados na tabela Foto
-INSERT INTO `foto` (`foto`, `evento_id`)
-VALUES ('imagem1.jpg', 1);
-
-INSERT INTO `foto` (`foto`, `evento_id`)
-VALUES ('imagem2.jpg', 2);
-
-INSERT INTO `foto` (`foto`, `evento_id`)
-VALUES ('imagem3.jpg', 3);
 
 -- Inserindo dados na tabela Usuario_Evento
 INSERT INTO `usuario_evento` (`usuario_id`, `evento_id`)
