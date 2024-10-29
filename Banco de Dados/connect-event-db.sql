@@ -108,16 +108,16 @@ VALUES (2, 3, 'ativo'); -- Maria Oliveira é amiga de Carlos Santos
 
 
 INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`) VALUES
-('Rua da Consolação', 'São Paulo', 'Consolação', 'São Paulo', 123),
-('Avenida Paulista', 'São Paulo', 'Bela Vista', 'São Paulo', 456),
-('Rua dos Três Irmãos', 'São Paulo', 'Jardim São Paulo', 'São Paulo', 789),
-('Avenida Sorocaba', 'Sorocaba', 'Centro', 'Sorocaba', 101),
-('Rua das Flores', 'Sorocaba', 'Jardim das Rosas', 'Sorocaba', 202),
-('Rua Rio de Janeiro', 'Sorocaba', 'Jardim Planalto', 'Sorocaba', 303),
-('Rua do Comércio', 'Itu', 'Centro', 'Itu', 404),
-('Avenida das Nações', 'Itu', 'Jardim Nova Itu', 'Itu', 505),
-('Rua das Oliveiras', 'Itu', 'Jardim São Francisco', 'Itu', 606),
-('Rua dos Pioneiros', 'Sorocaba', 'Jardim Vergueiro', 'Sorocaba', 707);
+('Rua da Consolação', 'SP', 'Consolação', 'São Paulo', 123),
+('Avenida Paulista', 'SP', 'Bela Vista', 'São Paulo', 456),
+('Rua dos Três Irmãos', 'SP', 'Jardim São Paulo', 'São Paulo', 789),
+('Avenida Sorocaba', 'SP', 'Centro', 'Sorocaba', 101),
+('Rua das Flores', 'SP', 'Jardim das Rosas', 'Sorocaba', 202),
+('Rua Rio de Janeiro', 'SP', 'Jardim Planalto', 'Sorocaba', 303),
+('Rua do Comércio', 'SP', 'Centro', 'Itu', 404),
+('Avenida das Nações', 'SP', 'Jardim Nova Itu', 'Itu', 505),
+('Rua das Oliveiras', 'SP', 'Jardim São Francisco', 'Itu', 606),
+('Rua dos Pioneiros', 'SP', 'Jardim Vergueiro', 'Sorocaba', 707);
 
 
 -- Inserindo dados na tabela Evento
