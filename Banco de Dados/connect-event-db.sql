@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `nome` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL UNIQUE,
   `senha` VARCHAR(60) NOT NULL,
-  `idade` INT,
+  `idade` INT default null,
   `genero` VARCHAR(40),
   `cidade` VARCHAR(30),
   `estado` VARCHAR(30)
@@ -185,6 +185,8 @@ INSERT INTO tipo (id, tipo) VALUES (11, 'Show');
 INSERT INTO tipo (id, tipo) VALUES (12, 'Social');
 INSERT INTO tipo (id, tipo) VALUES (13, 'Stand-Up');
 INSERT INTO tipo (id, tipo) VALUES (14, 'Técnico-Científico');
+
+
 
 
 
