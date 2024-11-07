@@ -64,6 +64,7 @@ CREATE TABLE IF NOT EXISTS `foto` (
 CREATE TABLE IF NOT EXISTS `usuario_evento` (
   `usuario_id` INT NOT NULL,
   `evento_id` INT NOT NULL,
+  `data` DATE NOT NULL DEFAULT (CURDATE()),
   PRIMARY KEY (`usuario_id`, `evento_id`),
   FOREIGN KEY (`usuario_id`) REFERENCES `usuario`(`id`) ON DELETE CASCADE,
   FOREIGN KEY (`evento_id`) REFERENCES `evento`(`id`) ON DELETE CASCADE
@@ -178,17 +179,18 @@ INSERT INTO `foto` (`caminho`, `evento_id`) VALUES
 ('/backup/festival-verao.jpg', 10);
 
 -- Inserindo dados na tabela Usuario_Evento
-INSERT INTO usuario_evento (usuario_id, evento_id) VALUES
-    (1, 1), (1, 3), (1, 5),
-    (2, 2), (2, 4), (2, 6),
-    (3, 1), (3, 7), (3, 9),
-    (4, 3), (4, 5), (4, 8),
-    (5, 2), (5, 4), (5, 10),
-    (6, 1), (6, 6), (6, 9),
-    (7, 2), (7, 7), (7, 10),
-    (8, 3), (8, 5), (8, 8),
-    (9, 1), (9, 4), (9, 6),
-    (10, 2), (10, 8), (10, 10);
+INSERT INTO usuario_evento (usuario_id, evento_id, data) VALUES
+    (1, 1, '2024-10-05'), (1, 3, '2024-11-12'), (1, 5, '2024-12-15'),
+    (2, 2, '2024-10-20'), (2, 4, '2025-01-08'), (2, 6, '2025-02-11'),
+    (3, 1, '2024-11-22'), (3, 7, '2025-03-19'), (3, 9, '2024-12-01'),
+    (4, 3, '2025-01-13'), (4, 5, '2025-02-20'), (4, 8, '2025-03-25'),
+    (5, 2, '2024-12-05'), (5, 4, '2025-01-28'), (5, 10, '2025-04-02'),
+    (6, 1, '2024-11-03'), (6, 6, '2025-02-15'), (6, 9, '2025-03-22'),
+    (7, 2, '2024-12-10'), (7, 7, '2025-01-15'), (7, 10, '2025-04-10'),
+    (8, 3, '2025-02-05'), (8, 5, '2025-03-01'), (8, 8, '2025-04-12'),
+    (9, 1, '2024-10-18'), (9, 4, '2024-12-25'), (9, 6, '2025-01-30'),
+    (10, 2, '2025-02-18'), (10, 8, '2025-03-14'), (10, 10, '2025-04-20');
+
 
 
 -- Inserindo dados na tabela Interacao
