@@ -98,30 +98,6 @@ INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `e
 ('Daniel Ohata', 'ohata@example.com', 'Senha@08H', 31, 'Outro', 'Brasília', 'DF'),
 ('Fabiola Silva', 'fabiola@example.com', 'Senha@09I', 26, 'Feminino', 'Fortaleza', 'CE');
 
-
--- Inserindo dados na tabela Amigos
--- Friend requests sent between users
-INSERT INTO `amigos` (`user_id_1`, `user_id_2`, `status`) VALUES
-(1, 2, 'aceito'), -- Admin and Pedro Henrique are friends
-(1, 3, 'aceito'), -- Admin and Victor Ottoni are friends
-(1, 4, 'pendente'), -- Admin sent a friend request to Joao Pedro
-(2, 5, 'aceito'), -- Pedro Henrique and Frederico Santos are friends
-(2, 6, 'pendente'), -- Pedro Henrique sent a friend request to Maria Oliveira
-(3, 4, 'aceito'), -- Victor Ottoni and Joao Pedro are friends
-(3, 7, 'aceito'), -- Victor Ottoni and Carina are friends
-(3, 8, 'pendente'), -- Victor Ottoni sent a friend request to Eliney Sabino
-(4, 6, 'aceito'), -- Joao Pedro and Maria Oliveira are friends
-(4, 9, 'aceito'), -- Joao Pedro and Daniel Ohata are friends
-(5, 6, 'pendente'), -- Frederico Santos sent a friend request to Maria Oliveira
-(5, 10, 'aceito'), -- Frederico Santos and Fabiola Silva are friends
-(6, 8, 'aceito'), -- Maria Oliveira and Eliney Sabino are friends
-(7, 8, 'pendente'), -- Carina sent a friend request to Eliney Sabino
-(8, 9, 'aceito'), -- Eliney Sabino and Daniel Ohata are friends
-(9, 10, 'pendente'), -- Daniel Ohata sent a friend request to Fabiola Silva
-(10, 1, 'aceito'); -- Fabiola Silva and Admin are friends
-
-
-
 INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`) VALUES
 ('Rua da Consolação', 'SP', 'Consolação', 'São Paulo', 123),
 ('Avenida Paulista', 'SP', 'Bela Vista', 'São Paulo', 456),
@@ -134,6 +110,70 @@ INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`) VALUES
 ('Rua das Oliveiras', 'SP', 'Jardim São Francisco', 'Itu', 606),
 ('Rua dos Pioneiros', 'SP', 'Jardim Vergueiro', 'Sorocaba', 707);
 
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES
+('Lucas Silva', 'lucas.silva@example.com', 'Senha@01A', 27, 'Masculino', 'São Paulo', 'SP'),
+('Ana Costa', 'ana.costa@example.com', 'Senha@02B', 32, 'Feminino', 'Rio de Janeiro', 'RJ'),
+('Carlos Eduardo', 'carlos.ed@example.com', 'Senha@03C', 24, 'Masculino', 'Belo Horizonte', 'MG'),
+('Patricia Almeida', 'patricia.almeida@example.com', 'Senha@04D', 29, 'Feminino', 'Curitiba', 'PR'),
+('João Silva', 'joao.silva@example.com', 'Senha@05E', 25, 'Masculino', 'Porto Alegre', 'RS'),
+('Rafaela Oliveira', 'rafaela.oliveira@example.com', 'Senha@06F', 23, 'Feminino', 'Florianópolis', 'SC'),
+('Renato Souza', 'renato.souza@example.com', 'Senha@07G', 31, 'Masculino', 'Salvador', 'BA'),
+('Juliana Pereira', 'juliana.pereira@example.com', 'Senha@08H', 28, 'Feminino', 'Brasília', 'DF'),
+('Eduardo Lima', 'eduardo.lima@example.com', 'Senha@09I', 26, 'Masculino', 'Fortaleza', 'CE'),
+('Mariana Costa', 'mariana.costa@example.com', 'Senha@10J', 30, 'Feminino', 'São Paulo', 'SP'),
+('Gustavo Martins', 'gustavo.martins@example.com', 'Senha@11K', 32, 'Masculino', 'Rio de Janeiro', 'RJ'),
+('Fabiana Rodrigues', 'fabiana.rodrigues@example.com', 'Senha@12L', 28, 'Feminino', 'Belo Horizonte', 'MG'),
+('Roberto Costa', 'roberto.costa@example.com', 'Senha@13M', 34, 'Masculino', 'Curitiba', 'PR'),
+('Aline Souza', 'aline.souza@example.com', 'Senha@14N', 27, 'Feminino', 'Porto Alegre', 'RS'),
+('Marcos Antonio', 'marcos.antonio@example.com', 'Senha@15O', 29, 'Masculino', 'Florianópolis', 'SC'),
+('Fernanda Pereira', 'fernanda.pereira@example.com', 'Senha@16P', 25, 'Feminino', 'Salvador', 'BA'),
+('André Silva', 'andre.silva@example.com', 'Senha@17Q', 30, 'Masculino', 'Brasília', 'DF'),
+('Larissa Oliveira', 'larissa.oliveira@example.com', 'Senha@18R', 32, 'Feminino', 'Fortaleza', 'CE'),
+('Paulo Roberto', 'paulo.roberto@example.com', 'Senha@19S', 31, 'Masculino', 'São Paulo', 'SP'),
+('Isabela Santos', 'isabela.santos@example.com', 'Senha@20T', 24, 'Feminino', 'Rio de Janeiro', 'RJ'),
+('Felipe Gomes', 'felipe.gomes@example.com', 'Senha@21U', 28, 'Masculino', 'Belo Horizonte', 'MG'),
+('Cláudia Martins', 'claudia.martins@example.com', 'Senha@22V', 29, 'Feminino', 'Curitiba', 'PR'),
+('Sérgio Lima', 'sergio.lima@example.com', 'Senha@23W', 30, 'Masculino', 'Porto Alegre', 'RS'),
+('Camila Ferreira', 'camila.ferreira@example.com', 'Senha@24X', 32, 'Feminino', 'Florianópolis', 'SC'),
+('José Carlos', 'jose.carlos@example.com', 'Senha@25Y', 26, 'Masculino', 'Salvador', 'BA'),
+('Tatiane Almeida', 'tatiane.almeida@example.com', 'Senha@26Z', 24, 'Feminino', 'Brasília', 'DF'),
+('Felipe Pereira', 'felipe.pereira@example.com', 'Senha@27A', 28, 'Masculino', 'Fortaleza', 'CE'),
+('Verônica Costa', 'veronica.costa@example.com', 'Senha@28B', 27, 'Feminino', 'São Paulo', 'SP'),
+('Lucas Oliveira', 'lucas.oliveira@example.com', 'Senha@29C', 26, 'Masculino', 'Rio de Janeiro', 'RJ'),
+('Juliana Martins', 'juliana.martins@example.com', 'Senha@30D', 29, 'Feminino', 'Belo Horizonte', 'MG'),
+('Diogo Souza', 'diogo.souza@example.com', 'Senha@31E', 30, 'Masculino', 'Curitiba', 'PR'),
+('Mariana Silva', 'mariana.silva@example.com', 'Senha@32F', 23, 'Feminino', 'Porto Alegre', 'RS'),
+('Ricardo Oliveira', 'ricardo.oliveira@example.com', 'Senha@33G', 31, 'Masculino', 'Florianópolis', 'SC'),
+('Sandra Almeida', 'sandra.almeida@example.com', 'Senha@34H', 26, 'Feminino', 'Salvador', 'BA'),
+('Douglas Costa', 'douglas.costa@example.com', 'Senha@35I', 27, 'Masculino', 'Brasília', 'DF'),
+('Roberta Lima', 'roberta.lima@example.com', 'Senha@36J', 29, 'Feminino', 'Fortaleza', 'CE'),
+('Raul Souza', 'raul.souza@example.com', 'Senha@37K', 24, 'Masculino', 'São Paulo', 'SP'),
+('Fernanda Martins', 'fernanda.martins@example.com', 'Senha@38L', 32, 'Feminino', 'Rio de Janeiro', 'RJ'),
+('Maurício Lima', 'mauricio.lima@example.com', 'Senha@39M', 30, 'Masculino', 'Belo Horizonte', 'MG'),
+('Carla Pereira', 'carla.pereira@example.com', 'Senha@40N', 28, 'Feminino', 'Curitiba', 'PR'),
+('Eduardo Santos', 'eduardo.santos@example.com', 'Senha@41O', 29, 'Masculino', 'Porto Alegre', 'RS'),
+('Tatiane Costa', 'tatiane.costa@example.com', 'Senha@42P', 23, 'Feminino', 'Florianópolis', 'SC'),
+('Paulo Martins', 'paulo.martins@example.com', 'Senha@43Q', 32, 'Masculino', 'Salvador', 'BA'),
+('Mariana Souza', 'mariana.souza@example.com', 'Senha@44R', 30, 'Feminino', 'Brasília', 'DF'),
+('Gustavo Pereira', 'gustavo.pereira@example.com', 'Senha@45S', 25, 'Masculino', 'Fortaleza', 'CE'),
+('Daniela Costa', 'daniela.costa@example.com', 'Senha@46T', 28, 'Feminino', 'São Paulo', 'SP'),
+('Leonardo Oliveira', 'leonardo.oliveira@example.com', 'Senha@47U', 31, 'Masculino', 'Rio de Janeiro', 'RJ'),
+('Raquel Rodrigues', 'raquel.rodrigues@example.com', 'Senha@48V', 29, 'Feminino', 'Belo Horizonte', 'MG'),
+('Fábio Souza', 'fabio.souza@example.com', 'Senha@49W', 30, 'Masculino', 'Curitiba', 'PR'),
+('Ana Souza', 'ana.souza@example.com', 'Senha@50X', 28, 'Feminino', 'Porto Alegre', 'RS');
+
+INSERT INTO `amigos` (`user_id_1`, `user_id_2`, `status`) VALUES
+(1, 2, 'aceito'), (1, 3, 'pendente'), (1, 4, 'aceito'),
+(2, 5, 'pendente'), (2, 6, 'aceito'), (2, 7, 'pendente'),
+(3, 4, 'aceito'), (3, 5, 'pendente'), (3, 6, 'aceito'),
+(4, 5, 'aceito'), (4, 6, 'pendente'), (4, 7, 'aceito'),
+(5, 6, 'aceito'), (5, 7, 'pendente'), (5, 8, 'aceito'),
+(6, 7, 'pendente'), (6, 8, 'aceito'), (6, 9, 'pendente'),
+(7, 8, 'aceito'), (7, 9, 'pendente'), (8, 9, 'aceito'),
+(8, 10, 'pendente'), (9, 10, 'aceito'), (1, 5, 'pendente'),
+(1, 6, 'aceito'), (2, 10, 'aceito'), (3, 7, 'pendente'),
+(4, 8, 'aceito'), (5, 9, 'pendente'), (6, 10, 'aceito'),
+(7, 10, 'pendente');
 
 -- Inserindo dados na tabela Evento
 INSERT INTO `evento` (`titulo`, `descricao`, `data`, `horario`, `tipo`, `telefone`, `livre`, `link`, `is_anunciado`, `endereco_id`, `usuario_id`)
@@ -180,17 +220,45 @@ INSERT INTO `foto` (`caminho`, `evento_id`) VALUES
 
 -- Inserindo dados na tabela Usuario_Evento
 INSERT INTO usuario_evento (usuario_id, evento_id, data) VALUES
-    (1, 1, '2024-10-05'), (1, 3, '2024-11-12'), (1, 5, '2024-12-15'),
-    (2, 2, '2024-10-20'), (2, 4, '2025-01-08'), (2, 6, '2025-02-11'),
-    (3, 1, '2024-11-22'), (3, 7, '2025-03-19'), (3, 9, '2024-12-01'),
-    (4, 3, '2025-01-13'), (4, 5, '2025-02-20'), (4, 8, '2025-03-25'),
-    (5, 2, '2024-12-05'), (5, 4, '2025-01-28'), (5, 10, '2025-04-02'),
-    (6, 1, '2024-11-03'), (6, 6, '2025-02-15'), (6, 9, '2025-03-22'),
-    (7, 2, '2024-12-10'), (7, 7, '2025-01-15'), (7, 10, '2025-04-10'),
-    (8, 3, '2025-02-05'), (8, 5, '2025-03-01'), (8, 8, '2025-04-12'),
-    (9, 1, '2024-10-18'), (9, 4, '2024-12-25'), (9, 6, '2025-01-30'),
-    (10, 2, '2025-02-18'), (10, 8, '2025-03-14'), (10, 10, '2025-04-20');
-
+    (2, 6, '2024-10-15'), (2, 7, '2024-10-22'), (2, 5, '2024-10-29'),
+    (3, 8, '2024-12-10'), (3, 1, '2024-10-15'), (3, 9, '2024-11-05'),
+    (4, 5, '2024-11-12'), (4, 6, '2024-11-19'), (4, 7, '2024-11-26'),
+    (5, 3, '2024-11-05'), (5, 4, '2024-11-12'), (5, 9, '2024-11-19'),
+    (6, 2, '2024-11-26'), (6, 5, '2024-12-03'), (6, 10, '2024-12-10'),
+    (7, 4, '2024-12-03'), (7, 1, '2024-10-22'), (7, 6, '2024-11-26'),
+    (8, 10, '2024-12-17'), (8, 2, '2024-10-29'), (8, 5, '2024-11-05'),
+    (9, 3, '2024-11-12'), (9, 6, '2024-11-19'), (9, 7, '2024-11-26'),
+    (10, 4, '2024-11-19'), (10, 2, '2024-11-05'), (10, 9, '2024-11-12'),
+    (11, 8, '2024-12-24'), (11, 7, '2024-12-03'), (11, 3, '2024-10-22'),
+    (12, 5, '2024-11-26'), (12, 9, '2024-12-03'), (12, 2, '2024-11-12'),
+    (13, 10, '2024-12-10'), (13, 3, '2024-11-19'), (13, 4, '2024-12-03'),
+    (14, 1, '2024-12-03'), (14, 6, '2024-12-10'), (14, 8, '2024-12-17'),
+    (15, 7, '2024-12-10'), (15, 9, '2024-11-05'), (15, 10, '2024-12-17'),
+    (16, 2, '2024-11-12'), (16, 4, '2024-11-19'), (16, 5, '2024-11-26'),
+    (17, 6, '2024-10-29'), (17, 8, '2024-12-03'), (17, 1, '2024-12-10'),
+    (18, 3, '2024-11-05'), (18, 5, '2024-11-12'), (18, 9, '2024-12-17'),
+    (19, 2, '2024-11-19'), (19, 10, '2024-12-10'), (19, 6, '2024-12-17'),
+    (20, 1, '2024-12-10'), (20, 8, '2024-11-26'), (20, 4, '2024-12-03'),
+    (21, 3, '2024-11-12'), (21, 6, '2024-11-19'), (21, 7, '2024-11-26'),
+    (22, 5, '2024-11-05'), (22, 10, '2024-12-03'), (22, 2, '2024-10-29'),
+    (23, 4, '2024-12-10'), (23, 9, '2024-11-12'), (23, 7, '2024-11-05'),
+    (24, 2, '2024-12-17'), (24, 6, '2024-11-12'), (24, 8, '2024-11-19'),
+    (25, 1, '2024-11-26'), (25, 4, '2024-12-03'), (25, 10, '2024-12-10'),
+    (26, 5, '2024-12-17'), (26, 7, '2024-11-19'), (26, 6, '2024-11-26'),
+    (27, 1, '2024-12-03'), (27, 2, '2024-11-12'), (27, 3, '2024-12-17'),
+    (28, 4, '2024-11-19'), (28, 9, '2024-12-03'), (28, 8, '2024-12-10'),
+    (29, 7, '2024-11-26'), (29, 6, '2024-11-12'), (29, 3, '2024-11-19'),
+    (30, 10, '2024-12-03'), (30, 4, '2024-12-10'), (30, 7, '2024-11-19'),
+    (31, 1, '2024-11-05'), (31, 3, '2024-11-12'), (31, 6, '2024-12-03'),
+    (32, 2, '2024-10-22'), (32, 10, '2024-12-10'), (32, 8, '2024-12-17'),
+    (33, 5, '2024-11-19'), (33, 9, '2024-11-05'), (33, 4, '2024-11-12'),
+    (34, 6, '2024-11-19'), (34, 1, '2024-10-29'), (34, 7, '2024-12-03'),
+    (35, 2, '2024-11-26'), (35, 8, '2024-11-12'), (35, 9, '2024-12-10'),
+    (36, 3, '2024-10-29'), (36, 7, '2024-12-10'), (36, 10, '2024-12-17'),
+    (37, 5, '2024-11-05'), (37, 4, '2024-12-03'), (37, 9, '2024-11-12'),
+    (38, 2, '2024-11-26'), (38, 8, '2024-12-03'), (38, 6, '2024-11-19'),
+    (39, 1, '2024-11-12'), (39, 7, '2024-12-10'), (39, 4, '2024-12-03'),
+    (40, 5, '2024-11-19'), (40, 3, '2024-10-29'), (40, 8, '2024-12-10');
 
 
 -- Inserindo dados na tabela Interacao
