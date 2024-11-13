@@ -70,25 +70,29 @@ CREATE TABLE IF NOT EXISTS `usuario_evento` (
   FOREIGN KEY (`evento_id`) REFERENCES `evento`(`id`) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
--- Tabela Interacao
-CREATE TABLE IF NOT EXISTS `interacao` (
-  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `usuario_id` INT NOT NULL,
-  `evento_id` INT NOT NULL,
-  FOREIGN KEY (`usuario_id`) REFERENCES `usuario`(`id`) ON DELETE CASCADE,
-  FOREIGN KEY (`evento_id`) REFERENCES `evento`(`id`) ON DELETE CASCADE
-) ENGINE = InnoDB;
-
 CREATE TABLE IF NOT EXISTS `tipo` (
   id INT PRIMARY KEY,
   tipo VARCHAR(255)
 ) ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `feedback` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `usuario_id` INT NOT NULL,
+  `evento_id` INT NOT NULL,
+  `comentario` TEXT,
+  `nota` INT,  -- ou outro tipo de avaliação, dependendo de como o feedback será
+  `data` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE (`usuario_id`, `evento_id`),  -- Garantir que um usuário só possa dar um feedback por evento
+  FOREIGN KEY (`usuario_id`) REFERENCES `usuario`(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`evento_id`) REFERENCES `evento`(`id`) ON DELETE CASCADE
+) ENGINE = InnoDB;
+
+
 -- Inserindo dados na tabela Usuario
 
 INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES
 ('Admin', 'admin', '123', 30, 'Outro', 'São Paulo', 'SP'),
-('Pedro Henrique', 'pedro.henrique@gmail.com', 'senha7893', 28, 'Masculino', 'São Paulo', 'SP'),
+('Pedro Henrique', 'pedro.henrique@gmail.com', 'Senha@02B', 28, 'Masculino', 'São Paulo', 'SP'),
 ('Victor Ottoni', 'victor@example.com', 'Senha@02B', 25, 'Masculino', 'Rio de Janeiro', 'RJ'),
 ('Joao Pedro', 'joao@example.com', 'Senha@03C', 27, 'Masculino', 'Belo Horizonte', 'MG'),
 ('Frederico Santos', 'frederido@example.com', 'Senha@04D', 22, 'Masculino', 'Curitiba', 'PR'),
@@ -163,7 +167,7 @@ INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `e
 ('Ana Souza', 'ana.souza@example.com', 'Senha@50X', 28, 'Feminino', 'Porto Alegre', 'RS');
 
 INSERT INTO `amigos` (`user_id_1`, `user_id_2`, `status`) VALUES
-(1, 2, 'aceito'), (1, 3, 'pendente'), (1, 4, 'aceito'),
+(1, 2, 'aceito'), (3, 1, 'pendente'), (1, 4, 'aceito'),
 (2, 5, 'pendente'), (2, 6, 'aceito'), (2, 7, 'pendente'),
 (3, 4, 'aceito'), (3, 5, 'pendente'), (3, 6, 'aceito'),
 (4, 5, 'aceito'), (4, 6, 'pendente'), (4, 7, 'aceito'),
@@ -259,17 +263,6 @@ INSERT INTO usuario_evento (usuario_id, evento_id, data) VALUES
     (38, 2, '2024-11-26'), (38, 8, '2024-12-03'), (38, 6, '2024-11-19'),
     (39, 1, '2024-11-12'), (39, 7, '2024-12-10'), (39, 4, '2024-12-03'),
     (40, 5, '2024-11-19'), (40, 3, '2024-10-29'), (40, 8, '2024-12-10');
-
-
--- Inserindo dados na tabela Interacao
-INSERT INTO `interacao` (`usuario_id`, `evento_id`)
-VALUES (1, 1);
-
-INSERT INTO `interacao` (`usuario_id`, `evento_id`)
-VALUES (2, 2);
-
-INSERT INTO `interacao` (`usuario_id`, `evento_id`)
-VALUES (3, 3);
 
 INSERT INTO tipo (id, tipo) VALUES (1, 'Artístico');
 INSERT INTO tipo (id, tipo) VALUES (2, 'Balada');
