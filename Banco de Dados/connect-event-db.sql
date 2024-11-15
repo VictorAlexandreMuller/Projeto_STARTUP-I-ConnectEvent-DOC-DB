@@ -224,6 +224,7 @@ INSERT INTO `foto` (`caminho`, `evento_id`) VALUES
 
 -- Inserindo dados na tabela Usuario_Evento
 INSERT INTO usuario_evento (usuario_id, evento_id, data) VALUES
+	(1, 1, '2024-10-15'),(1, 9, '2024-10-15'), (2, 1, '2024-10-15'),
     (2, 6, '2024-10-15'), (2, 7, '2024-10-22'), (2, 5, '2024-10-29'),
     (3, 8, '2024-12-10'), (3, 1, '2024-10-15'), (3, 9, '2024-11-05'),
     (4, 5, '2024-11-12'), (4, 6, '2024-11-19'), (4, 7, '2024-11-26'),
@@ -278,3 +279,23 @@ INSERT INTO tipo (id, tipo) VALUES (11, 'Show');
 INSERT INTO tipo (id, tipo) VALUES (12, 'Social');
 INSERT INTO tipo (id, tipo) VALUES (13, 'Stand-Up');
 INSERT INTO tipo (id, tipo) VALUES (14, 'Técnico-Científico');
+
+-- Insert evento 1
+INSERT INTO feedback (usuario_id, evento_id, comentario, nota)
+VALUES
+(20, 1, 'Excelente evento! Muito bem organizado e com ótima estrutura.', 9),
+(3, 1, 'A palestra foi cansativa e pouco informativa.', 3),
+(30, 1, 'Organização falha e falta de controle do tempo.', 4),
+(10, 1, 'Conteúdo interessante, mas a logística deixou a desejar.', 5),
+(2, 1, 'Esperava mais do evento, não atendeu às minhas expectativas.', 2);
+
+-- Insert evento 9
+INSERT INTO feedback (usuario_id, evento_id, comentario, nota)
+VALUES
+(40, 9, 'Evento excelente! Trouxe muita informação nova.', 10),
+(35, 9, 'A palestra foi boa, mas poderia ter mais exemplos práticos.', 7),
+(14, 9, 'Organização deixou a desejar e os palestrantes pareciam despreparados.', 3),
+(37, 9, 'Muito barulho e pouco conteúdo relevante.', 4),
+(22, 9, 'Faltou organização e o evento foi abaixo do esperado.', 2);
+
+
