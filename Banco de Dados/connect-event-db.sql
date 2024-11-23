@@ -87,6 +87,11 @@ CREATE TABLE IF NOT EXISTS `feedback` (
   FOREIGN KEY (`evento_id`) REFERENCES `evento`(`id`) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `destaque` (
+	`eventoId` INT NOT NULL PRIMARY KEY,
+	FOREIGN KEY (`eventoId`) REFERENCES `evento` (`id`) ON DELETE CASCADE
+);
+
 
 -- Inserindo dados na tabela Usuario
 
@@ -297,5 +302,8 @@ VALUES
 (14, 9, 'Organização deixou a desejar e os palestrantes pareciam despreparados.', 3),
 (37, 9, 'Muito barulho e pouco conteúdo relevante.', 4),
 (22, 9, 'Faltou organização e o evento foi abaixo do esperado.', 2);
+
+INSERT INTO destaque (eventoId)
+VALUES (1), (2), (3);
 
 
