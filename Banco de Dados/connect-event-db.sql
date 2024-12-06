@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nome` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL UNIQUE,
-  `senha` VARCHAR(60) NOT NULL,
+  `senha` VARCHAR(100) NOT NULL,
   `idade` INT default null,
   `genero` VARCHAR(40),
   `cidade` VARCHAR(30),
@@ -96,17 +96,17 @@ CREATE TABLE IF NOT EXISTS `destaque` (
 
 -- Inserindo dados na tabela Usuario
 
-INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES
-('Admin', 'admin', '123', 30, 'Outro', 'São Paulo', 'SP'),
-('Pedro Henrique', 'pedro.henrique@gmail.com', 'Senha@02B', 28, 'Masculino', 'São Paulo', 'SP'),
-('Victor Ottoni', 'victor@example.com', 'Senha@02B', 25, 'Masculino', 'Rio de Janeiro', 'RJ'),
-('Joao Pedro', 'joao@example.com', 'Senha@03C', 27, 'Masculino', 'Belo Horizonte', 'MG'),
-('Frederico Santos', 'frederido@example.com', 'Senha@04D', 22, 'Masculino', 'Curitiba', 'PR'),
-('Maria Oliveira', 'maria@example.com', 'Senha@05E', 28, 'Feminino', 'Porto Alegre', 'RS'),
-('Carina', 'carina@example.com', 'Senha@06F', 24, 'Feminino', 'Florianópolis', 'SC'),
-('Eliney Sabino', 'eliney@example.com', 'Senha@07G', 29, 'Outro', 'Salvador', 'BA'),
-('Daniel Ohata', 'ohata@example.com', 'Senha@08H', 31, 'Outro', 'Brasília', 'DF'),
-('Fabiola Silva', 'fabiola@example.com', 'Senha@09I', 26, 'Feminino', 'Fortaleza', 'CE');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Admin', 'admin', '$2b$10$.pUtTSec8fhmbKzTk5jCL.crbqV0y4kM88lBe2TzYyQBaDO.bpllC', 30, 'Outro', 'São Paulo', 'SP');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Pedro Henrique', 'pedro.henrique@gmail.com', '$2b$10$mRKhuHx7PI9V0cI4ds.YQ.u4VHWI7eQJcBgL/mjiUjNhndqYGgspK', 28, 'Masculino', 'São Paulo', 'SP');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Victor Ottoni', 'victor@example.com', '$2b$10$XGM0rna7./tHKsfocpKqXuZyaBTEZVsoeQ76cv0bLWi42XWj8KaRG', 25, 'Masculino', 'Rio de Janeiro', 'RJ');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Joao Pedro', 'joao@example.com', '$2b$10$e55JSNDoxe6fB/bXjlEzkuXQQ9VusjuVPZwE03sHC3V4W2LKVeCAi', 27, 'Masculino', 'Belo Horizonte', 'MG');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Frederico Santos', 'frederido@example.com', '$2b$10$p7ofdJo4siwFGYFNc3t1U.euduPWetz2ZxvyBlM/sPhdRvabHjj7O', 22, 'Masculino', 'Curitiba', 'PR');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Maria Oliveira', 'maria@example.com', '$2b$10$kXobZc6imIn.pL.tcv7yUuR035U.Z0nrdtl3Ff5SJyH.s0jKP/jgG', 28, 'Feminino', 'Porto Alegre', 'RS');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Carina', 'carina@example.com', '$2b$10$M6deZsSZZM/esRRTcdWJZ.1fYYCenwBTSOa4C7isZ3r/PIoPeC/oq', 24, 'Feminino', 'Florianópolis', 'SC');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Eliney Sabino', 'eliney@example.com', '$2b$10$Sa/4.UInJKjtjBLjwsvgDO5lWZkmxurLXV3bXBslFy/GNls5/hC42', 29, 'Outro', 'Salvador', 'BA');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Daniel Ohata', 'ohata@example.com', '$2b$10$GW82AM.Jrvu70hbANBgncuxobTzuuTaGVQ8FtRJLzUab35F6NMbge', 31, 'Outro', 'Brasília', 'DF');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Fabiola Silva', 'fabiola@example.com', '$2b$10$7fi5mxWSDGVgkTPK8fH/decTn0pAjnV5q1Dqj6YYA7ClhSpBIWbw2', 26, 'Feminino', 'Fortaleza', 'CE');
+
 
 INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`) VALUES
 ('Rua da Consolação', 'SP', 'Consolação', 'São Paulo', 123),
@@ -120,57 +120,47 @@ INSERT INTO `endereco` (`local`, `estado`, `bairro`, `cidade`, `numero`) VALUES
 ('Rua das Oliveiras', 'SP', 'Jardim São Francisco', 'Itu', 606),
 ('Rua dos Pioneiros', 'SP', 'Jardim Vergueiro', 'Sorocaba', 707);
 
-INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES
-('Lucas Silva', 'lucas.silva@example.com', 'Senha@01A', 27, 'Masculino', 'São Paulo', 'SP'),
-('Ana Costa', 'ana.costa@example.com', 'Senha@02B', 32, 'Feminino', 'Rio de Janeiro', 'RJ'),
-('Carlos Eduardo', 'carlos.ed@example.com', 'Senha@03C', 24, 'Masculino', 'Belo Horizonte', 'MG'),
-('Patricia Almeida', 'patricia.almeida@example.com', 'Senha@04D', 29, 'Feminino', 'Curitiba', 'PR'),
-('João Silva', 'joao.silva@example.com', 'Senha@05E', 25, 'Masculino', 'Porto Alegre', 'RS'),
-('Rafaela Oliveira', 'rafaela.oliveira@example.com', 'Senha@06F', 23, 'Feminino', 'Florianópolis', 'SC'),
-('Renato Souza', 'renato.souza@example.com', 'Senha@07G', 31, 'Masculino', 'Salvador', 'BA'),
-('Juliana Pereira', 'juliana.pereira@example.com', 'Senha@08H', 28, 'Feminino', 'Brasília', 'DF'),
-('Eduardo Lima', 'eduardo.lima@example.com', 'Senha@09I', 26, 'Masculino', 'Fortaleza', 'CE'),
-('Mariana Costa', 'mariana.costa@example.com', 'Senha@10J', 30, 'Feminino', 'São Paulo', 'SP'),
-('Gustavo Martins', 'gustavo.martins@example.com', 'Senha@11K', 32, 'Masculino', 'Rio de Janeiro', 'RJ'),
-('Fabiana Rodrigues', 'fabiana.rodrigues@example.com', 'Senha@12L', 28, 'Feminino', 'Belo Horizonte', 'MG'),
-('Roberto Costa', 'roberto.costa@example.com', 'Senha@13M', 34, 'Masculino', 'Curitiba', 'PR'),
-('Aline Souza', 'aline.souza@example.com', 'Senha@14N', 27, 'Feminino', 'Porto Alegre', 'RS'),
-('Marcos Antonio', 'marcos.antonio@example.com', 'Senha@15O', 29, 'Masculino', 'Florianópolis', 'SC'),
-('Fernanda Pereira', 'fernanda.pereira@example.com', 'Senha@16P', 25, 'Feminino', 'Salvador', 'BA'),
-('André Silva', 'andre.silva@example.com', 'Senha@17Q', 30, 'Masculino', 'Brasília', 'DF'),
-('Larissa Oliveira', 'larissa.oliveira@example.com', 'Senha@18R', 32, 'Feminino', 'Fortaleza', 'CE'),
-('Paulo Roberto', 'paulo.roberto@example.com', 'Senha@19S', 31, 'Masculino', 'São Paulo', 'SP'),
-('Isabela Santos', 'isabela.santos@example.com', 'Senha@20T', 24, 'Feminino', 'Rio de Janeiro', 'RJ'),
-('Felipe Gomes', 'felipe.gomes@example.com', 'Senha@21U', 28, 'Masculino', 'Belo Horizonte', 'MG'),
-('Cláudia Martins', 'claudia.martins@example.com', 'Senha@22V', 29, 'Feminino', 'Curitiba', 'PR'),
-('Sérgio Lima', 'sergio.lima@example.com', 'Senha@23W', 30, 'Masculino', 'Porto Alegre', 'RS'),
-('Camila Ferreira', 'camila.ferreira@example.com', 'Senha@24X', 32, 'Feminino', 'Florianópolis', 'SC'),
-('José Carlos', 'jose.carlos@example.com', 'Senha@25Y', 26, 'Masculino', 'Salvador', 'BA'),
-('Tatiane Almeida', 'tatiane.almeida@example.com', 'Senha@26Z', 24, 'Feminino', 'Brasília', 'DF'),
-('Felipe Pereira', 'felipe.pereira@example.com', 'Senha@27A', 28, 'Masculino', 'Fortaleza', 'CE'),
-('Verônica Costa', 'veronica.costa@example.com', 'Senha@28B', 27, 'Feminino', 'São Paulo', 'SP'),
-('Lucas Oliveira', 'lucas.oliveira@example.com', 'Senha@29C', 26, 'Masculino', 'Rio de Janeiro', 'RJ'),
-('Juliana Martins', 'juliana.martins@example.com', 'Senha@30D', 29, 'Feminino', 'Belo Horizonte', 'MG'),
-('Diogo Souza', 'diogo.souza@example.com', 'Senha@31E', 30, 'Masculino', 'Curitiba', 'PR'),
-('Mariana Silva', 'mariana.silva@example.com', 'Senha@32F', 23, 'Feminino', 'Porto Alegre', 'RS'),
-('Ricardo Oliveira', 'ricardo.oliveira@example.com', 'Senha@33G', 31, 'Masculino', 'Florianópolis', 'SC'),
-('Sandra Almeida', 'sandra.almeida@example.com', 'Senha@34H', 26, 'Feminino', 'Salvador', 'BA'),
-('Douglas Costa', 'douglas.costa@example.com', 'Senha@35I', 27, 'Masculino', 'Brasília', 'DF'),
-('Roberta Lima', 'roberta.lima@example.com', 'Senha@36J', 29, 'Feminino', 'Fortaleza', 'CE'),
-('Raul Souza', 'raul.souza@example.com', 'Senha@37K', 24, 'Masculino', 'São Paulo', 'SP'),
-('Fernanda Martins', 'fernanda.martins@example.com', 'Senha@38L', 32, 'Feminino', 'Rio de Janeiro', 'RJ'),
-('Maurício Lima', 'mauricio.lima@example.com', 'Senha@39M', 30, 'Masculino', 'Belo Horizonte', 'MG'),
-('Carla Pereira', 'carla.pereira@example.com', 'Senha@40N', 28, 'Feminino', 'Curitiba', 'PR'),
-('Eduardo Santos', 'eduardo.santos@example.com', 'Senha@41O', 29, 'Masculino', 'Porto Alegre', 'RS'),
-('Tatiane Costa', 'tatiane.costa@example.com', 'Senha@42P', 23, 'Feminino', 'Florianópolis', 'SC'),
-('Paulo Martins', 'paulo.martins@example.com', 'Senha@43Q', 32, 'Masculino', 'Salvador', 'BA'),
-('Mariana Souza', 'mariana.souza@example.com', 'Senha@44R', 30, 'Feminino', 'Brasília', 'DF'),
-('Gustavo Pereira', 'gustavo.pereira@example.com', 'Senha@45S', 25, 'Masculino', 'Fortaleza', 'CE'),
-('Daniela Costa', 'daniela.costa@example.com', 'Senha@46T', 28, 'Feminino', 'São Paulo', 'SP'),
-('Leonardo Oliveira', 'leonardo.oliveira@example.com', 'Senha@47U', 31, 'Masculino', 'Rio de Janeiro', 'RJ'),
-('Raquel Rodrigues', 'raquel.rodrigues@example.com', 'Senha@48V', 29, 'Feminino', 'Belo Horizonte', 'MG'),
-('Fábio Souza', 'fabio.souza@example.com', 'Senha@49W', 30, 'Masculino', 'Curitiba', 'PR'),
-('Ana Souza', 'ana.souza@example.com', 'Senha@50X', 28, 'Feminino', 'Porto Alegre', 'RS');
+INSERT INTO usuario (nome, email, senha, idade, genero, cidade, estado) VALUES
+('Lucas Silva', 'lucas.silva@example.com', '$2b$10$kfOUiH2eaEe1H1YRGjo7deSdMU40O6a22mYPNIVV0xdfBFaszqUvi', 27, 'Masculino', 'São Paulo', 'SP'),
+('Ana Costa', 'ana.costa@example.com', '$2b$10$UA/KFzfKT5KkInYp82ByeONEeRN0U8uGjYPN.sJZx9REHWx4HKiHW', 27, 'Masculino', 'São Paulo', 'SP'),
+('Carlos Eduardo', 'carlos.ed@example.com', '$2b$10$WPgngFEvmGxSY1sGzoN1i.pVg.lBlMN2zNp1n3h96qA.wOVIdDnn2', 27, 'Masculino', 'São Paulo', 'SP'),
+('Patricia Almeida', 'patricia.almeida@example.com', '$2b$10$zT/F5RX3C2ZThK55py1UzeO0D3mK2/yB01Selie6PrlaSc6uxwL/.', 27, 'Masculino', 'São Paulo', 'SP'),
+('João Silva', 'joao.silva@example.com', '$2b$10$3SmkAKjvoX81vnL5E2uQVeBCJ0Sqq4upLyNvdR1W/v46iJuaJtYni', 27, 'Masculino', 'São Paulo', 'SP'),
+('Rafaela Oliveira', 'rafaela.oliveira@example.com', '$2b$10$0spVcUznmNxKHDp356tf/unPD2sQDPfzqQAL0KXIDF09mBvGSfbA6', 27, 'Masculino', 'São Paulo', 'SP'),
+('Renato Souza', 'renato.souza@example.com', '$2b$10$g.b4w9UxV3DH2.XLxRme0uhZ/mnAuQfILMfMYOh/EKAblDOhoX3vu', 27, 'Masculino', 'São Paulo', 'SP'),
+('Juliana Pereira', 'juliana.pereira@example.com', '$2b$10$MkPojhCyFKHQNAA13pML..6KEjYrvzZyWtuwe72tT/cB9RzwWEtYC', 27, 'Masculino', 'São Paulo', 'SP'),
+('Eduardo Lima', 'eduardo.lima@example.com', '$2b$10$tFmEwq6ry0QkZIs8RGWRg.TrR7Po.2YrVx2qhaQ9ktJeWvj.JzeX6', 27, 'Masculino', 'São Paulo', 'SP'),
+('Mariana Costa', 'mariana.costa@example.com', '$2b$10$yRKttVHOgeQVMl9uqqE4zeal1hg1jYkMJb8LiCuymsBx/vULqGdfa', 27, 'Masculino', 'São Paulo', 'SP'),
+('Gustavo Martins', 'gustavo.martins@example.com', '$2b$10$/p8V/vDMVkFR8fhGcInoyufDnRbCPawr7ptXfX2qMHqWc4nE5Prsy', 27, 'Masculino', 'São Paulo', 'SP'),
+('Fabiana Rodrigues', 'fabiana.rodrigues@example.com', '$2b$10$DvYI70FeGFfV.VkLBaBeW.2DjH3YH6Bh9sowuIWPyP9A0xymMa5fa', 27, 'Masculino', 'São Paulo', 'SP'),
+('Roberto Costa', 'roberto.costa@example.com', '$2b$10$pVffkpc22QKo84KC6AryYuC6c7yWQM6l5fspipIBe0X0wVofDrjb.', 27, 'Masculino', 'São Paulo', 'SP'),
+('Aline Souza', 'aline.souza@example.com', '$2b$10$B810VfYDn8U5wdXRPGYlX.ARWx4GqAgPkbDoD/gfqYgDJ53r2ASwy', 27, 'Masculino', 'São Paulo', 'SP'),
+('Marcos Antonio', 'marcos.antonio@example.com', '$2b$10$mx7AJ.kXQh3/8q5kkYi2TunVvWXkSDsJHbfJjR1D8GZBCQDDr6PPG', 27, 'Masculino', 'São Paulo', 'SP'),
+('Fernanda Pereira', 'fernanda.pereira@example.com', '$2b$10$UG7hOMuensUVIlYNO4phA.abpd8rrr/M0zRcistyGjCqOQ0ZY7wWi', 27, 'Masculino', 'São Paulo', 'SP'),
+('André Silva', 'andre.silva@example.com', '$2b$10$n4juA30XmM2U2pTzkwmubOj7ytVrnaEMXNnl2mfYByr4bDBfUBQo.', 27, 'Masculino', 'São Paulo', 'SP'),
+('Larissa Oliveira', 'larissa.oliveira@example.com', '$2b$10$88V6G6R04gPJGBVkV768OeFS0rzCW1G/W9sSEF4WSLmQPt/KlQ2vy', 27, 'Masculino', 'São Paulo', 'SP'),
+('Paulo Roberto', 'paulo.roberto@example.com', '$2b$10$sp1oj628fYYG4B7BWY6xFO52zH8zmksK56fZzspJcylq43.ylISMC', 27, 'Masculino', 'São Paulo', 'SP'),
+('Isabela Santos', 'isabela.santos@example.com', '$2b$10$WX6g6tk.XQqkWx8dJjzipeZUIUWX2f9A.yI.sR5plId3VPQWEKXJy', 27, 'Masculino', 'São Paulo', 'SP'),
+('Felipe Gomes', 'felipe.gomes@example.com', '$2b$10$ZbE5osITN/JbPRC3.xkLwemoRrevTeP52JM9YN6.8QgkgsAXoWtSm', 27, 'Masculino', 'São Paulo', 'SP'),
+('Cláudia Martins', 'claudia.martins@example.com', '$2b$10$lDw9TBCW/4.aX/06AdL1cew6RgviJHAPgpz.Z8StOjy2FjuUBk3Me', 27, 'Masculino', 'São Paulo', 'SP'),
+('Sérgio Lima', 'sergio.lima@example.com', '$2b$10$E25s0y646aaIOpYv1Reu5erKvypAVSIkDCPJWJkUbNCxCiXB/BvBG', 27, 'Masculino', 'São Paulo', 'SP'),
+('Camila Ferreira', 'camila.ferreira@example.com', '$2b$10$sQN/4fSdbS82pSKN4P3K7uw8zBHKphcIQ30ZNQC976hraCnviUxeu', 27, 'Masculino', 'São Paulo', 'SP'),
+('José Carlos', 'jose.carlos@example.com', '$2b$10$r6HXTlnuZbu/wwcQMyFpx.DJE/vAGqv06a0GTtQCJ/QMheae4F68S', 27, 'Masculino', 'São Paulo', 'SP'),
+('Tatiane Almeida', 'tatiane.almeida@example.com', '$2b$10$hqPGf3NOCZ34.WWadeNR7urcC8O13MnzapVyWZrBw/x2.mvDHh3dW', 27, 'Masculino', 'São Paulo', 'SP'),
+('Felipe Pereira', 'felipe.pereira@example.com', '$2b$10$4pM4WQn0A2uSwBfNGb2/FOen/XHfvg33GeaTrGxEZeZ3q5wT5UapW', 27, 'Masculino', 'São Paulo', 'SP'),
+('Verônica Costa', 'veronica.costa@example.com', '$2b$10$64I7VjfmxgtDVZl0wMSdF.5im6mJWDEm5/2RPh5Fd800tEFKXEg3a', 27, 'Masculino', 'São Paulo', 'SP'),
+('Lucas Oliveira', 'lucas.oliveira@example.com', '$2b$10$sRl2L7vhLrj7kHX5TxDCcFbmH6O5IbO1OT8Sjs.nvvjKYmwZ37xHq', 27, 'Masculino', 'São Paulo', 'SP');
+
+INSERT INTO usuario (nome, email, senha, idade, genero, cidade, estado) VALUES
+('Gabriela Martins', 'gabriela.martins@example.com', '$2b$10$6bN7TjA.OJymVElLezUuq9AxmwrOxAk3Z2Fjffba1y2rkxqvDni5y', 28, 'Feminino', 'São Paulo', 'SP'),
+('Roberta Costa', 'roberta.costa@example.com', '$2b$10$H8ksgGbMKTbwcpseNi7SgA8qlg9u7R5l92NSsXTEl9Za0A0PpPoEa', 29, 'Feminino', 'São Paulo', 'SP'),
+('Marina Almeida', 'marina.almeida@example.com', '$2b$10$5VJl9oAPt1zrdIxdTUKq3xA1gD8Cv9f5gGq6K4VZ9I9EELa//81Xy', 30, 'Feminino', 'São Paulo', 'SP'),
+('Juliana Costa', 'juliana.costa@example.com', '$2b$10$0E0lDB4DWZZv9s5XqB1C5wh0g13hU9iDiZaG0chQDFVYB8fuHLZ9ay', 26, 'Feminino', 'São Paulo', 'SP'),
+('Claudia Ferreira', 'claudia.ferreira@example.com', '$2b$10$T6Vq6fpwQEzQAYkPZqKm82u/F7DPV7HtDr.V4/s6wZm7Hry5JRU8S', 28, 'Feminino', 'São Paulo', 'SP'),
+('Fabiola Lima', 'fabiola.lima@example.com', '$2b$10$zGv9zFSjPhl/BH/2jPeYNrtqMLgJl4Lv./gQDPj.S1HLUo53d//2G', 32, 'Feminino', 'São Paulo', 'SP'),
+('Ana Paula', 'ana.paula@example.com', '$2b$10$k7Y43L6BbY3P2d/zyzz8Fu5vcM7q0lz2wepAvlKLfdhtMN8lhbaSm', 27, 'Feminino', 'São Paulo', 'SP'),
+('Beatriz Santos', 'beatriz.santos@example.com', '$2b$10$UbzWGv7Pbw8f94YpHpFBbuIAw3TOe7jFbZmjBYlTybkItHRDC9cqO', 26, 'Feminino', 'São Paulo', 'SP'),
+('Camila Souza', 'camila.souza@example.com', '$2b$10$4oaBfqZWQj5x.hq.xYmnqqWqg6otFPndXyFqAAtFc3EjRogWxRUGy', 30, 'Feminino', 'São Paulo', 'SP');
 
 INSERT INTO `amigos` (`user_id_1`, `user_id_2`, `status`) VALUES
 (1, 2, 'aceito'), (3, 1, 'pendente'), (1, 4, 'aceito'),
