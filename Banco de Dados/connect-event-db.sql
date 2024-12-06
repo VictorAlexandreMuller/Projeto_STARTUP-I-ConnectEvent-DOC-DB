@@ -12,7 +12,8 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `idade` INT default null,
   `genero` VARCHAR(40),
   `cidade` VARCHAR(30),
-  `estado` VARCHAR(30)
+  `estado` VARCHAR(30),
+  `wallpaper` VARCHAR(30) default 'default.jpg'
 ) ENGINE = InnoDB;
 
 -- Tabela Amigos
