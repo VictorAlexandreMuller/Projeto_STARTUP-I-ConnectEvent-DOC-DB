@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `destaque` (
 
 -- Inserindo dados na tabela Usuario
 
-INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Admin', 'admin', '$2b$10$.pUtTSec8fhmbKzTk5jCL.crbqV0y4kM88lBe2TzYyQBaDO.bpllC', 30, 'Outro', 'São Paulo', 'SP');
+INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Admin', 'admin@admin.com', '$2b$10$.pUtTSec8fhmbKzTk5jCL.crbqV0y4kM88lBe2TzYyQBaDO.bpllC', 30, 'Outro', 'São Paulo', 'SP');
 INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Pedro Henrique', 'pedro.henrique@gmail.com', '$2b$10$mRKhuHx7PI9V0cI4ds.YQ.u4VHWI7eQJcBgL/mjiUjNhndqYGgspK', 28, 'Masculino', 'São Paulo', 'SP');
 INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Victor Ottoni', 'victor@example.com', '$2b$10$XGM0rna7./tHKsfocpKqXuZyaBTEZVsoeQ76cv0bLWi42XWj8KaRG', 25, 'Masculino', 'Rio de Janeiro', 'RJ');
 INSERT INTO `usuario` (`nome`, `email`, `senha`, `idade`, `genero`, `cidade`, `estado`) VALUES ('Joao Pedro', 'joao@example.com', '$2b$10$e55JSNDoxe6fB/bXjlEzkuXQQ9VusjuVPZwE03sHC3V4W2LKVeCAi', 27, 'Masculino', 'Belo Horizonte', 'MG');
